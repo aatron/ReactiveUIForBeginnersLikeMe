@@ -9,11 +9,11 @@
         Title="MainWindow" >
     <Grid>
         <Metro:MetroTabControl>
-            <Metro:MetroTabItem>
-                <TextBlock />
-            </Metro:MetroTabItem>
-            <Metro:MetroTabItem>
-                <TextBlock />
+            <Metro:MetroTabItem Header="Text">
+                <StackPanel>
+                    <TextBox Text="{Binding TextModel.FirstName, UpdateSourceTrigger=PropertyChanged}" />
+                    <TextBlock Text="{Binding TextModel.FirstName}" />
+                </StackPanel>
             </Metro:MetroTabItem>
         </Metro:MetroTabControl>
         

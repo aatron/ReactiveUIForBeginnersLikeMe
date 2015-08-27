@@ -1,5 +1,7 @@
 ﻿using MahApps.Metro.Controls;
 
+using ReactiveUIForBeginnersLikeMe.ViewModel;
+
 namespace ReactiveUIForBeginnersLikeMe
 {
     /// <summary>
@@ -10,6 +12,7 @@ namespace ReactiveUIForBeginnersLikeMe
         public MainWindow()
         {
             InitializeComponent();
+            DataContext = new MainViewModel();
         }
     }
 }
