@@ -10,10 +10,31 @@
     <Grid>
         <Metro:MetroTabControl>
             <Metro:MetroTabItem Header="Text">
-                <StackPanel>
+                <StackPanel 
+                        Width="150"
+                        HorizontalAlignment="Left">
                     <TextBox Text="{Binding TextModel.FirstName, UpdateSourceTrigger=PropertyChanged}" />
                     <TextBlock Text="{Binding TextModel.FirstName}" />
                 </StackPanel>
+            </Metro:MetroTabItem>
+            <Metro:MetroTabItem Header="Drop Down">
+                <StackPanel 
+                        Width="150"
+                        HorizontalAlignment="Left">
+                    <Metro:DropDownButton Content="[Select]" 
+                                            ItemsSource="{Binding ListModel.Names}" 
+                                            DisplayMemberPath="FirstName" 
+                                             />
+                    <StackPanel Orientation="Horizontal">
+                        <Metro:SplitButton 
+                                            ItemsSource="{Binding ListModel.Names}" 
+                                            DisplayMemberPath="FirstName" 
+                                            SelectedItem="{Binding ListModel.SelectedName}"
+                                             />
+                        <TextBlock Text="{Binding ListModel.SelectedName.LastName}" />
+                    </StackPanel>
+                </StackPanel>
+                
             </Metro:MetroTabItem>
         </Metro:MetroTabControl>
         
